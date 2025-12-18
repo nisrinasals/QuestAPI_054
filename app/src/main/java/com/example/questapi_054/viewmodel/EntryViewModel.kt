@@ -31,5 +31,15 @@ class EntryViewModel(private val repositoriDataSiswa: RepositoriDataSiswa):
             )
     }
 
-
+    suspend fun addSiswa() {
+        if(validasiInput()){
+            val sip: Response<Void> = repositoriDataSiswa
+                .postDataSiswa(uiStateSiswa.detailSiswa.toDataSiswa())
+            if(sip.isSuccessful){
+                println("Sukses Tambah Data : ${sip.message()}")
+            } else {
+                println("Gagal tambah data : ${sip.errorBody()}")
+            }
+        }
+    }
 }
