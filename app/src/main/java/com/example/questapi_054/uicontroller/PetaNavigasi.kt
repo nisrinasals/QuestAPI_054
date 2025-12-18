@@ -1,10 +1,10 @@
 package com.example.questapi_054.uicontroller
 
+import com.example.questapi_054.uicontroller.route.DestinasiDetail
+import com.example.questapi_054.uicontroller.route.DestinasiEntry
+import com.example.questapi_054.uicontroller.route.DestinasiHome
 import com.example.questapi_054.view.EntrySiswaScreen
 import com.example.questapi_054.view.HomeScreen
-
-package com.example.questapi.uicontroller
-
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
