@@ -13,6 +13,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import com.example.questapi_054.modeldata.DetailSiswa
 
 @Composable
 fun DataSiswaApp(navController: NavHostController = rememberNavController(),
@@ -44,6 +45,9 @@ fun HostNavigasi(
         }
         composable ( DestinasiDetail.routeWithArgs, arguments = listOf(navArgument(DestinasiDetail.itemIdArg){
             type = NavType.IntType })
-        ){}
+        ){
+            DetailSiswaScreen(navigateToEditItem = {navController.navigate("${DestinasiEdit.route}/$it")},
+                navigateBack = {navController.navigate(DestinasiHome.route)})
+        }
     }
 }
