@@ -8,9 +8,11 @@ import com.example.questapi_054.view.HomeScreen
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
 
 @Composable
 fun DataSiswaApp(navController: NavHostController = rememberNavController(),
@@ -40,5 +42,8 @@ fun HostNavigasi(
                 navController.navigate(DestinasiHome.route)
             })
         }
+        composable ( DestinasiDetail.routeWithArgs, arguments = listOf(navArgument(DestinasiDetail.itemIdArg){
+            type = NavType.IntType })
+        ){}
     }
 }
