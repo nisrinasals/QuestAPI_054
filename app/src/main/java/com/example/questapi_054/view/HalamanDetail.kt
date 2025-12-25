@@ -1,4 +1,4 @@
-package com.example.questapi_054.view
+package com.example.questapi.view
 
 import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.Arrangement
@@ -37,6 +37,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.questapi_054.R
 import com.example.questapi_054.modeldata.DataSiswa
 import com.example.questapi_054.uicontroller.route.DestinasiDetail
+import com.example.questapi_054.view.SiswaTopAppBar
 import com.example.questapi_054.viewmodel.DetailViewModel
 import com.example.questapi_054.viewmodel.StatusUIDetail
 import com.example.questapi_054.viewmodel.provider.PenyediaViewModel
@@ -69,7 +70,7 @@ fun DetailSiswaScreen(
                 modifier = Modifier.padding(dimensionResource(id = R.dimen.padding_large))
             ) {
                 Icon(
-                    ImageVector = Icons.Default.Edit,
+                    imageVector = Icons.Default.Edit,
                     contentDescription = stringResource(id = R.string.update),
                 )
             }
