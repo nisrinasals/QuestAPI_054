@@ -82,7 +82,7 @@ fun DetailSiswaScreen(
             statusUiDetail = viewModel.statusUIDetail,
             onDelete = { coroutineScope.launch {
                 viewModel.hapusSatuSiswa()
-                navigateBack
+                navigateBack()
             }},
             modifier = Modifier
                 .padding(innerPadding)

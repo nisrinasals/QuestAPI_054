@@ -46,7 +46,7 @@ import com.example.questapi_054.viewmodel.provider.PenyediaViewModel
 @Composable
 fun HomeScreen(
     navigateToItemEntry: () -> Unit,
-    navigateToItemUpdate: () -> Unit,
+    navigateToItemUpdate: (Int) -> Unit,
     modifier: Modifier,
     viewModel: HomeViewModel = viewModel(factory = PenyediaViewModel.Factory)
 ) {
@@ -76,7 +76,7 @@ fun HomeScreen(
             innerPadding ->
         HomeBody(
             statusUiSiswa = viewModel.listSiswa,
-            onSiswaClick = {navigateToItemUpdate},
+            onSiswaClick = navigateToItemUpdate,
             retryAction = viewModel::loadSiswa,
             modifier = modifier
                 .padding(innerPadding)
